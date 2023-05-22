@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    hostname: mongodb
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_AUTHENTICATION_DATABASE: admin   # Name of the mongoDB authentication database. By default, it is admin.
+      MONGO_INITDB_ROOT_USERNAME: adminUserName     # Admin username, which is created automatically after service start.
+      MONGO_INITDB_ROOT_PASSWORD: adminPassword     # Password for admin created user.
